@@ -1,22 +1,21 @@
-    FROM python:3.11
+FROM python:3.11
 
 
-    # Install/
-    RUN \
-     apt-get update && \
-     apt-get -y dist-upgrade && \
-     apt-get install -y python3 python3-pip redis
+# Install/
+RUN \
+ apt-get update && \
+ apt-get -y dist-upgrade && \
+ apt-get install -y python3 python3-pip redis
 
-    RUN pip install discord.py
-    RUN pip install datetime
-    RUN pip install typing
+RUN pip install discord.py
+RUN pip install datetime
+RUN pip install typing
 
-    WORKDIR /app
-    COPY . /app
-    
-    USER root
+WORKDIR /app
+COPY . /app
 
-    #ENTRYPOINT ["/bin/sh", "-c"]
+USER root
+#ENTRYPOINT ["/bin/sh", "-c"]
 
-    # Start non-daemonized webserver
-    CMD ["python3", "./main.py"]
+# Start non-daemonized webserver
+CMD ["python3", "./main.py"]
