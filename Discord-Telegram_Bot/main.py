@@ -16,5 +16,7 @@ async def on_message( message):
     else:
         await message.channel.send('{0.author}({0.created_at}): {0.content}'.format(message))
 
+with open("config.txt") as f:
+    TOKEN = f.read().strip()
 
-bot.run('MTE2MTY3NzI2MDA2NDAzOTA3Mw.GzS58m.gVbYz53-onoGGPvcG_Wmm54CNvFQfXpJ6s6Jhc')
+bot.run(TOKEN)
