@@ -1,0 +1,11 @@
+version: '3'
+services:
+  telegram_part:
+    build: ./Telegram-Discord_Bot
+    volumes:
+      - ./Telegram-Discord_Bot:/app
+  
+  discord_part:
+    build: ./Discord-Telegram_Bot
+    volumes:
+      - ./Discord-Telegram_Bot:/app
