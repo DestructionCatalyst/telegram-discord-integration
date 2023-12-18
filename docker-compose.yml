@@ -9,3 +9,8 @@ services:
     build: ./Discord-Telegram_Bot
     volumes:
       - ./Discord-Telegram_Bot:/app
+
+  redis:
+    image: redis:latest
+    expose:
+      - 6379

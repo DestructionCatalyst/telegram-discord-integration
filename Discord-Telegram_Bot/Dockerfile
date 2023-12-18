@@ -10,6 +10,7 @@ RUN \
 RUN pip install discord.py
 RUN pip install datetime
 RUN pip install typing
+RUN pip install redis
 
 WORKDIR /app
 COPY . /app

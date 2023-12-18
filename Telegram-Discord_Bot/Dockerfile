@@ -8,7 +8,7 @@ RUN \
   apt-get -y dist-upgrade && \
   apt-get install -y python3 python3-pip redis
 
-RUN pip install pyTelegramBotAPI typing datetime
+RUN pip install pyTelegramBotAPI typing datetime redis aiohttp
 
 WORKDIR /app
 COPY . /app
